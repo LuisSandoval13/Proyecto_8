@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 8 </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            grid-template-areas:
+                "img1 img1 img2 img3"
+                "img4 img5 img5 img3"
+                "img4 img6 img6 img6";
+            grid-gap: 15px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .img1 {
+            grid-area: img1;
+        }
+
+        .img2 {
+            grid-area: img2;
+        }
+
+        .img3 {
+            grid-area: img3;
+        }
+
+        .img4 {
+            grid-area: img4;
+        }
+
+        .img5 {
+            grid-area: img5;
+        }
+
+        .img6 {
+            grid-area: img6;
+        }
+
+
+        @media (max-width: 800px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "img1 img2"
+                    "img3 img4"
+                    "img5 img6";
+            }
+        }
+
+        @media (max-width: 500px) {
+            .grid {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "img1"
+                    "img2"
+                    "img3"
+                    "img4"
+                    "img5"
+                    "img6";
+            }
+        }
+
+        footer {
+            margin-top: 40px;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Diseño de Imágenes en Cuadrícula</h1>
+
+    <div class="grid">
+        <img src="https://cdn.pixabay.com/photo/2023/04/04/07/56/birds-7898729_1280.jpg" alt="" class="img1">
+        <img src="https://cdn.pixabay.com/photo/2025/01/03/13/37/cat-9307910_1280.jpg" alt="" class="img2">
+        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" alt="" class="img3">
+        <img src="https://cdn.pixabay.com/photo/2025/10/02/15/18/sheikh-zayed-grand-mosque-9868660_1280.jpg" alt=""
+            class="img4">
+        <img src="https://cdn.pixabay.com/photo/2021/11/03/21/44/nature-6766923_960_720.jpg" alt="" class="img5">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3" alt=" " class="img6">
+    </div>
+
+    <footer>
+        Proyecto 8 | Luis Sandoval Vega
+    </footer>
+</body>
+
+</html>
